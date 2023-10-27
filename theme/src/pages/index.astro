@@ -1,92 +1,126 @@
 ---
-import { Container, FeatureCard } from '@littlesticks/odyssey-theme-components';
-
+import {Icon} from 'astro-icon'
+import {
+  AnnouncementBar,
+	Button,
+	CustomerQuoteSection,
+	ThreeColumnTextSection,
+	YouTubeEmbedSection,
+  StickyTextImageSection,
+  CtaCardSection
+} from '@littlesticks/odyssey-theme-components';
 import Layout from '../layouts/Page.astro';
-import HomeHeroSection from '../components/sections/heros/HomeHeroSection.astro';
+import TextAndImageHero from '../components/sections/heros/TextAndImageHero.astro';
+
+const seo = {
+	title: 'Landing Page #1 | Astro Odyssey Theme',
+	description: 'Landing Page #1 | Astro Odyssey Theme',
+};
 ---
 
-<Layout>
-	<HomeHeroSection />
-	<Container>
-		<section class="feature-card__section">
-			<h2>Landing Pages</h2>
-			<p>
-				Use one of our landing pages to jumpstart your website or
-				ad campaign.
-			</p>
-			<div class="feature-card__grid">
-				<FeatureCard href="/landing-pages/landing-1" title="Landing Page 1" imgSrc="/assets/images/home/screenshots/landing-1">
-				</FeatureCard>
-				<FeatureCard href="/landing-pages/landing-2" title="Landing Page 2" imgSrc="/assets/images/home/screenshots/landing-2">
-				</FeatureCard>
-			</div>
-		</section>
-	</Container>
+<AnnouncementBar text="Read Our Latest Blog Post" href="/blog/posts/remote-work-mental-health/" slot="announcement-bar"/>
+<Layout seo={seo} >
+	<TextAndImageHero reversed>
+		<div slot="text-container">
+			<h1>Supporting Villages In Bangladesh</h1>
+			<p>Seeds of Growth is a project based in St Leonards-on-Sea and Hastings, raising funds to help the people of Birahimpur, Bangladesh with emergency supplies and longer term projects.</p>
+		</div>
+		<div slot="btns-container">
+			<Button href="/company/about" customIcon
+				>Learn more <Fragment slot="icon">
+          <Icon name="ic:baseline-chevron-right"/>
+        </Fragment></Button
+			>
+		</div>
+		<picture slot="image-container">
+			<img
+				src='https://cdn2.editmysite.com/images/editor/theme-background/stock/Riversunset.jpg'
+				alt="Astro Odyssee"
+				id="home-hero-image"
+			/>
+		</picture>
+	</TextAndImageHero>
 
-	<Container>
-		<section class="feature-card__section">
-			<h2>Company Pages</h2>
-			<p>
-				Use one of our prebuilt company pages for your about page, contact page,
-				legal pages, blog posts, etc.
-			</p>
-			<div class="feature-card__grid">
-				<FeatureCard href="/company/about" title="About Page" imgSrc="/assets/images/home/screenshots/about">
-				</FeatureCard>
-				<FeatureCard href="/company/contact" title="Contact Page" imgSrc="/assets/images/home/screenshots/contact">
-				</FeatureCard>
-				<FeatureCard href="/blog/" title="Blog Page" imgSrc="/assets/images/home/screenshots/blog">
-				</FeatureCard>
-				<FeatureCard
-					href="/blog/posts/remote-work-mental-health"
-					title="Blog Post"
-          imgSrc="/assets/images/home/screenshots/blog-post"
-				>
-				</FeatureCard>
-				<FeatureCard
-					href="/company/legal"
-					imgSrc="/assets/images/home/screenshots/legal"
-					title="Legal Page"
-				>
-				</FeatureCard>
-			</div>
-		</section>
-	</Container>
+	<CustomerQuoteSection
+		quoteText="I want to say how impressed and moved I was reading your report on the work done in Bangladesh. I hope you are rightly proud of what you, and the team, have done to make a real and genuine difference to the lives of so many people in the village. I think it's wonderful work Catherine, which I want to continue to support."
+		customerName="John McC Brighton"
+	/>
 
-	<Container>
-		<section class="feature-card__section">
-			<h2>Theme Pages</h2>
-			<p>Learn more about how to set up and use the Odyssey Theme.</p>
-			<div class="feature-card__grid">
-				<FeatureCard
-					href="/theme/get-started"
-					imgSrc="/assets/images/home/screenshots/get-started"
-					title="Get Started"
-				>
-				</FeatureCard>
-				<FeatureCard
-					href="/theme/style-guide"
-					imgSrc="/assets/images/home/screenshots/style-guide"
-					title="Style Guide"
-				>
-				</FeatureCard>
-			</div>
-		</section>
-	</Container>
+	<ThreeColumnTextSection>
+		<div slot="column-1-body">
+			<h2>Donate</h2>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
+				tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
+				consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
+				mollitia cumque. Velit.
+			</p>
+		</div>
+		<Button slot="column-1-cta">Learn More</Button>
+		<div slot="column-2-body">
+			<h2>Fundraise</h2>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
+				tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
+				consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
+				mollitia cumque. Velit.
+			</p>
+		</div>
+		<Button slot="column-2-cta" outlined>Learn More</Button>
+		<div slot="column-3-body">
+			<h2>Volunteer</h2>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
+				tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
+				consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
+				mollitia cumque. Velit.
+			</p>
+		</div>
+		<Button slot="column-3-cta">Learn More</Button>
+	</ThreeColumnTextSection>
+
+  <StickyTextImageSection>
+    <div slot="text-container">
+      <h2>Birahimpur</h2>
+      <h3>Clean Water</h3>
+      <p>
+        There are 131 households on Birahimpur but only 10 houses have water pumps which means that there are 121 households without clean water.
+		
+		One of the short-to-medium term goals of Seeds of Growth is the fitting of community pumps. One community pump will provide water to four households.
+		
+		Of the 131 households, 80 families are without any form of sanitation. It is a medium-to-long term goal to provide a toilet for each of the families in the village.
+      </p>
+      <h3>Education</h3>
+        <p>
+			At the time of the December 2016 survey, 70 of the village school-age children were without school entrance fees. Seeds of Growth aims to offer assistance with school uniforms and fees to families.
+			
+			Due to the living conditions in many households, when children are attending school there is often no suitable place for them to study. One goal of Seeds of Growth will be the provision of a study or reading room for the village children.
+			
+			There are no facilities for children with disabilities in the state school system. Seeds of Growth will aim to introduce appropriate learning for children with disabilities.
+      </p>
+      <h3>Infrastructure</h3>
+        <p>
+			When the rains come and the village is flooded, it is not possible for some families to stay in their homes. The building of adequate flood protection is therefore a crucial goal in the long term.
+			
+			There is no sheltered meeting place in the village for any community groups or initiatives such as mother and baby groups, pre-school activities, adult learning, community planning, distribution of necessities and no communal storage of any kind.  The building of a community centre is a high-priority for the village. 
+      </p>
+    </div>
+     <picture slot="image-container">
+      <img
+        src="https://scontent-lhr8-1.xx.fbcdn.net/v/t1.6435-9/119574078_995553270905948_4162341914419714532_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=7f8c78&_nc_ohc=mj4SjbgXaxgAX-DEpRa&_nc_oc=AQkh0u0ZmrzEMtBhW-SssmL48xTfy4tI7uZxo2FLcrQ-OQ0iZndTU3v6mxOIQPootruvYUSRIm9guqzlQFVq5t2g&_nc_ht=scontent-lhr8-1.xx&oh=00_AfDjfargjrgQrUS5a2IHsx9MoAYCRG4Zaxte0oGlTRRvbg&oe=655E212A"
+        alt="Astro Odyssey"
+        loading="lazy"
+      />
+    </picture>
+  </StickyTextImageSection>
+
+  <CtaCardSection background="var(--theme-surface-2)" color="var(--theme-on-surface-2)">
+    <h2>Donate To Our Cause</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti temporibus neque, dicta est doloremque!</p>
+    <Button href="/" customIcon>Get Started <Fragment slot="icon">
+      <Icon name="ic:baseline-chevron-right"/>
+    </Fragment></Button>
+  </CtaCardSection>
+
 </Layout>
 
-<style>
-	.feature-card__section {
-		margin: var(--section-margin) auto;
-	}
-	.feature-card__grid {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: var(--theme-grid-gap);
-	}
-	@media (max-width: 768px) {
-		.feature-card__grid {
-			grid-template-columns: 1fr;
-		}
-	}
-</style>

@@ -1,80 +1,64 @@
 export const footerSocials = [
-  {
-    name: 'Twitter',
-    url: 'https://twitter.com/littlesticksdev',
-    icon: "mdi:twitter",
-  },
-  {
-    name: 'Youtube',
-    url: 'https://youtube.com/c/LittleSticks',
-    icon: "mdi:youtube",
-  },
-  {
-    name: 'Github',
-    url: 'https://github.com/littlesticks',
-    icon: "mdi:github",
-  },
-  {
-    name: 'Discord',
-    url: 'https://littlesticks.dev/discord',
-    icon: "ic:baseline-discord",
-  },
+	{
+		name: 'Twitter',
+		url: 'https://twitter.com/littlesticksdev',
+		icon: "mdi:twitter",
+	},
+	{
+		name: 'Facebook',
+		url: 'https://www.facebook.com',
+		icon: "ri:facebook-fill",
+	},
+	{
+		name: 'Instagram',
+		url: 'https://www.instagram.com/',
+		icon: "mdi:instagram",
+	},
+	{
+		name: 'Youtube',
+		url: 'https://youtube.com/c/LittleSticks',
+		icon: "mdi:youtube",
+	},
 ]
 
 export const footerLists = [
 	{
-		title: 'Landing Pages',
+		title: 'Company',
 		items: [
 			{
-				title: 'Landing Page 1',
+				title: 'About us',
 				slug: '/landing-pages/landing-1',
 			},
 			{
-				title: 'Landing Page 2',
+				title: 'Blog',
 				slug: '/landing-pages/landing-2',
 			},
-      // {
+			// {
 			// 	title: 'Landing Page 3',
 			// 	slug: '/landing-pages/landing-3',
 			// },
 		],
 	},
 	{
-		title: 'Company',
+		title: 'Get Involved',
 		items: [
 			{
-				title: 'About',
+				title: 'Donate',
 				slug: '/company/about',
 			},
 			{
-				title: 'Blog',
+				title: 'Volunteer',
 				slug: '/blog',
-			},
-			{
-				title: 'Contact',
-				slug: '/company/contact',
 			},
 		],
 	},
 	{
-		title: 'Theme',
+		title: 'Contact',
 		items: [
 			{
-				title: 'Get Started',
+				title: 'Contact Us',
 				slug: '/theme/get-started',
 			},
-			{
-				title: 'Style Guide',
-				slug: '/theme/style-guide',
-			},
-      {
-        title: 'Theme Setup',
-        slug: '/theme/theme-setup',
-      },
-      {
-        title: 'Customizing Odyssey',
-        slug: '/theme/customizing-odyssey',
-      }
 		],
 	},
 ];

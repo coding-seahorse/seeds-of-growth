@@ -1,4 +1,5 @@
 ---
+import { Icon } from 'astro-icon';
 import { Header, Button, Footer } from '@littlesticks/odyssey-theme-components';
 import Layout from './Base.astro';
 import type { Props as BaseHeadProps } from '../components/head/BaseHead.astro';
@@ -21,7 +22,7 @@ const { seo } = Astro.props as Props;
 		<span slot="logo">
 			<Logo />
 		</span>
-		<Button slot="action-item" href="/theme/get-started">Get Started</Button>
+		<Button slot="action-item" href="https://buy.stripe.com/test_cN25kr7VBbEBfL29AA" newTab>Donate <span class="icon"><Icon name="ic:round-north-east" width="18px" height="18px"/></span></Button>
 	</Header>
 	<div id="page">
 		<slot />
@@ -38,3 +39,12 @@ const { seo } = Astro.props as Props;
 		<Logo slot="logo" />
 	</Footer>
 </Layout>
+
+<style>
+.icon {
+	display: inline-block;
+    margin: 0.25rem 0 0 0.25rem;
+    vertical-align: middle;
+    transition: transform 0.2s ease;
+}
+</style>
